@@ -4,8 +4,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, 魔鬼">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex">
+    <meta name="keywords" content="前端面试-html，css篇, 魔鬼">
+    <meta name="description" content="html，css面试题html篇简述html页面渲染过程  整个渲染过程其实就是将URL对应的各种资源，通过浏览器渲染引擎的解析，输出可视化的图像。
+基本概念
+
+HTML解释器：解释HTML语言的解释器，本质是将HTML文本解释成DOM树（">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -28,7 +31,7 @@
     </style>
 
 
-    <title>Hello World | 魔鬼</title>
+    <title>前端面试-html，css篇 | 魔鬼</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -320,12 +323,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">前端面试-html，css篇</h1>
                 </div>
             </div>
         </div>
@@ -439,12 +442,29 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E9%9D%A2%E8%AF%95/">
+                                <span class="chip bg-color">面试</span>
+                            </a>
+                        
+                            <a href="/tags/html%EF%BC%8Ccss/">
+                                <span class="chip bg-color">html，css</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                前端
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -453,28 +473,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-06-16
+                    2022-06-24
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-06-16
+                    2022-06-24
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    73
+                    3.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    13 分
                 </div>
                 
 
@@ -497,19 +517,221 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new "My New Post"<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+                <h1 id="html，css面试题"><a href="#html，css面试题" class="headerlink" title="html，css面试题"></a>html，css面试题</h1><h2 id="html篇"><a href="#html篇" class="headerlink" title="html篇"></a>html篇</h2><h3 id="简述html页面渲染过程"><a href="#简述html页面渲染过程" class="headerlink" title="简述html页面渲染过程"></a>简述html页面渲染过程</h3><p>  整个渲染过程其实就是将URL对应的各种资源，通过浏览器渲染引擎的解析，输出可视化的图像。</p>
+<p><strong>基本概念</strong></p>
+<ul>
+<li>HTML解释器：解释HTML语言的解释器，本质是将HTML文本解释成DOM树（文档对象模型）。</li>
+<li>CSS解释器：解释样式表的解释器，其作用是将DOM中的各个元素对象加上样式信息，从而为计算最后结果的布局提供依据。</li>
+<li>布局：将DOM和css样式信息结合起来，计算它们的大小位置等布局信息，形成一个能够表示这所有信息的内部表示模型即渲染树。</li>
+<li>JavaScript引擎：JavaScript可以修改网页的内容，也能修改CSS的信息，JavaScript引擎解释JavaScript代码并把代码的逻辑和对DOM和CSS的改动信息应用到布局中去，从而改变渲染的结果。</li>
+</ul>
+<p><strong>基本过程</strong></p>
+<ul>
+<li>1.解析HTML文件，创建DOM树<br>浏览器解析html源码，然后创建一个 DOM树。并行请求 css/image/js在DOM树中，每一个HTML标签都有一个对应的节点，并且每一个文本也都会有一个对应的文本节点。DOM树的根节点就是 documentElement，对应的是html标签。</li>
+<li>2.解析CSS,形成CSS对象模型<br>浏览器解析CSS代码，计算出最终的样式数据。构建CSSOM树。对CSS代码中非法的语法它会直接忽略掉。解析CSS的时候会按照如下顺序来定义优先级：</li>
+</ul>
+<p>浏览器默认设置 &lt; 用户设置 &lt; 外链样式 &lt; 内联样式 &lt; html中的style。</p>
+<ul>
+<li>3.将CSS与DOM合并，构建渲染树（renderingtree）<br>DOM Tree + CSSOM –&gt; 渲染树（rendering tree）。渲染树和DOM树有点像，但是是有区别的。DOM树完全和html标签一一对应，但是渲染树会忽略掉不需要渲染的元素，比如head、display:none的元素等。而且一大段文本中的每一个行在渲染树中都是独立的一个节点。渲染树中的每一个节点都存储有对应的css属性。</li>
+<li>4.布局和绘制<br>一旦渲染树创建好了，浏览器就可以根据渲染树直接把页面绘制到屏幕上。</li>
+</ul>
+<p>以上四个步骤并不是一次性顺序完成的。如果DOM或者CSSOM被修改，以上过程会被重复执行。实际上，CSS和JavaScript往往会多次修改DOM或者CSSOM。</p>
+<p><strong>Repaint(重绘)</strong><br>重绘是改变不影响元素在网页中的位置的元素样式时，譬如background-color(背景色)， border-color(边框色)，visibility(可见性)，浏览器会根据元素的新属性重新绘制一次(这就是重绘，或者说重新构造样式)，使元素呈现新的外观。</p>
+<p>重绘不会带来重新布局，所以并不一定伴随重排。</p>
+<p><strong>Reflow（重排）</strong><br>渲染对象在创建完成并添加到渲染树时，并不包含位置和大小信息。计算这些值的过程称为布局或重排。</p>
+<p>“重绘”不一定需要”重排”，比如改变某个网页元素的颜色，就只会触发”重绘”，不会触发”重排”，因为布局没有改变。</p>
+<p>但是，”重排”必然导致”重绘”，比如改变一个网页元素的位置，就会同时触发”重排”和”重绘”，因为布局改变了。</p>
+<hr>
+<h3 id="页面导入样式时，使用link和-import有什么区别？"><a href="#页面导入样式时，使用link和-import有什么区别？" class="headerlink" title="页面导入样式时，使用link和@import有什么区别？"></a>页面导入样式时，使用link和@import有什么区别？</h3><p>link属于HTML标签，而@import是css提供的；</p>
+<p>页面被加载时，link会同时被加载，而@import引用的css会等到页面被加载完再加载；</p>
+<p>@import只在IE5以上才能识别，而link是XHTML标签，无兼容问题；</p>
+<p>link方式的样式的权重高于@import的权重。</p>
+<hr>
+<h3 id="HTML5有哪些新特性？"><a href="#HTML5有哪些新特性？" class="headerlink" title="HTML5有哪些新特性？"></a>HTML5有哪些新特性？</h3><ul>
+<li>新增语义化标签：nav、header、footer、aside、section、article</li>
+<li>音频、视频标签：audio、video</li>
+<li>数据存储：localStorage、sessionStorage</li>
+<li>canvas（画布）、Geolocation（地理定位）、websocket（通信协议）</li>
+<li>input标签新增属性：placeholder、autocomplete、autofocus、required</li>
+<li>history API<br>  go、forward、back、pushstate</li>
+</ul>
+<hr>
+<h3 id="行内元素有哪些？块级元素有哪些？-空-void-元素有那些？"><a href="#行内元素有哪些？块级元素有哪些？-空-void-元素有那些？" class="headerlink" title="行内元素有哪些？块级元素有哪些？ 空(void)元素有那些？"></a>行内元素有哪些？块级元素有哪些？ 空(void)元素有那些？</h3><p>CSS规范规定，每个元素都有display属性，确定该元素的类型，每个元素都有默认的display值，如div的display默认值为“block”，则为“块级”元素；span默认display属性值为“inline”，是“行内”元素。</p>
+<ul>
+<li><p>常见的块元素有：<br><code>&lt;div&gt;、&lt;p&gt;、&lt;h1&gt;...&lt;h6&gt;、&lt;ol&gt;、&lt;ul&gt;、&lt;dl&gt;、&lt;table&gt;、&lt;address&gt;、&lt;blockquote&gt; 、&lt;form&gt;</code></p>
+</li>
+<li><p>常用的内联元素有：<br><code>&lt;a&gt;、&lt;span&gt;、&lt;br&gt;、&lt;i&gt;、&lt;em&gt;、&lt;strong&gt;、&lt;label&gt;、&lt;q&gt;、&lt;var&gt;、&lt;cite&gt;、&lt;code&gt;</code></p>
+</li>
+<li><p>常用的内联块状元素有：<br><code>&lt;img&gt;、&lt;input&gt;</code></p>
+</li>
+<li><p>知名的空元素：<br><code>&lt;br/&gt; &lt;hr/&gt; &lt;img/&gt; &lt;input/&gt; &lt;link/&gt; &lt;meta/&gt; &lt;br /&gt;</code></p>
+</li>
+</ul>
+<hr>
+<h3 id="如何禁用a标签跳转页面或定位链接"><a href="#如何禁用a标签跳转页面或定位链接" class="headerlink" title="如何禁用a标签跳转页面或定位链接?"></a>如何禁用a标签跳转页面或定位链接?</h3><p>当页面中a标签不需要任何跳转时，从原理上来讲，可分如下两种方法：</p>
+<ul>
+<li><p>标签属性href，使其指向空或不返回任何内容。如：</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;a href="javascript:void(0);" &gt;点此无反应javascript:void(0)&lt;/a&gt;
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+&lt;a href="javascript:;" &gt;点此无反应javascript:&lt;/a&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>从标签事件入手，阻止其默认行为。如：<br>html方法：</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;a href="" onclick="return false;"&gt;return false;&lt;/a&gt;
+&lt;a href="#" onclick="return false;"&gt;return false;&lt;/a&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>或者在js文件中阻止默认点击事件：<br><code>Event.preventDefault()</code><br>还可以在css文件中处理点击，不响应任何鼠标事件：<br><code>pointer-events: none;</code></p>
+</li>
+</ul>
+<h2 id="css篇"><a href="#css篇" class="headerlink" title="css篇"></a>css篇</h2><h3 id="html和css中的图片加载与渲染规则是什么样的？"><a href="#html和css中的图片加载与渲染规则是什么样的？" class="headerlink" title="html和css中的图片加载与渲染规则是什么样的？"></a>html和css中的图片加载与渲染规则是什么样的？</h3><p>Web浏览器先会把获取到的HTML代码解析成一个DOM树，HTML中的每个标签都是DOM树中的一个节点，包括display: none隐藏的标签，还有JavaScript动态添加的元素等。浏览器会获取到所有样式，并会把所有样式解析成样式规则，在解析的过程中会去掉浏览器不能识别的样式。</p>
+<p>浏览器将会把DOM树和样式规则组合在一起（DOM元素和样式规则匹配）后将会合建一个渲染树（Render Tree），渲染树类似于DOM树，但两者别还是很大的：渲染树能识别样式，渲染树中每个节点（NODE）都有自己的样式，而且渲染树不包含隐藏的节点（比如display:none的节点，还有/head&gt;内的一些节点），因为这些节点不会用于渲染，也不会影响节点的渲染，因此不会包含到渲染树中。一旦渲染树构建完毕后，浏览器就可以根据渲染树来绘制页面了。</p>
+<p>简单的归纳就是浏览器渲染Web页面大约会经过六个过程：</p>
+<ul>
+<li>解析HTML，构成DOM树</li>
+<li>解析加载的样式，构建样式规则树</li>
+<li>加载JavaScript，执行JavaScript代码</li>
+<li>DOM树和样式规则树进行匹配，构成渲染树</li>
+<li>计算元素位置进行页面布局</li>
+<li>绘制页面，最终在浏览器中呈现</li>
+</ul>
+<p>是不是会感觉这个和我们图像加载渲染没啥关系一样，事实并非如此，因为img、picture或者background-image都是DOM树或样式规则中的一部分，那么咱们套用进来，图片加载和渲染的时机有可能是下面这样：</p>
+<ul>
+<li>解析HTML时，如果遇到img或picture标签，将会加载图片</li>
+<li>解析加载的样式，遇到background-image时，并不会加载图片，而会构建样式规则树</li>
+<li>加载JavaScript，执行JavaScript代码，如果代码中有创建img元素之类，会添加到DOM树中；如查有`添加background-image规则，将会添加到样式规则树中</li>
+<li>DOM树和样式规则匹配时构建渲染树，如果DOM树节点匹配到样式规则中的backgorund-image，则会加载背景图片</li>
+<li>计算元素（图片）位置进行布局</li>
+<li>开始渲染图片，浏览器将呈现渲染出来的图片</li>
+</ul>
+<p>上面套用浏览器渲染页面的机制，但图片加载与渲染还是有一定的规则。因为，页面中不是所有的img&gt;（或picture）元素引入的图片和background-image引入的背景图片都会加载的。那么就引发出新问题了，什么时候会真正的加载，加载规则又是什么？</p>
+<p>先概括一点：</p>
+<blockquote>
+<p>Web页面中不是所有的图片都会加载和渲染！</p>
+</blockquote>
+<p>根据前面介绍的浏览器加载和渲染机制，我们可以归纳为：</p>
+<ul>
+<li>img&gt;、picture&gt;和设置background-image的元素遇到display:none时，图片会加载但不会渲染</li>
+<li>img&gt;、picture&gt;和设置background-image的元素祖先元素设置display:none时，background-image不会渲染也不会加载，而img和picture引入的图片不会渲染但会加载</li>
+<li>img&gt;、picture&gt;和background-image引入相同路径相同图片文件名时，图片只会加载一次</li>
+<li>样式文件中background-image引入的图片，如果匹配不到DOM元素，图片不会加载</li>
+<li>伪类引入的background-image，比如:hover，只有当伪类被触发时，图片才会加载</li>
+</ul>
+<hr>
+<h3 id="css3新增了哪些特性？"><a href="#css3新增了哪些特性？" class="headerlink" title="css3新增了哪些特性？"></a>css3新增了哪些特性？</h3><p><img src="https://static.vue-js.com/d58f6df0-9b5e-11eb-ab90-d9ae814b240d.png"></p>
+<h4 id="一、是什么"><a href="#一、是什么" class="headerlink" title="一、是什么"></a>一、是什么</h4><p>css，即层叠样式表（Cascading Style Sheets）的简称，是一种标记语言，由浏览器解释执行用来使页面变得更美观</p>
+<p>css3是css的最新标准，是向后兼容的，CSS1/2 的特性在 CSS3 里都是可以使用的</p>
+<p>而 CSS3 也增加了很多新特性，为开发带来了更佳的开发体验</p>
+<h4 id="二、选择器"><a href="#二、选择器" class="headerlink" title="二、选择器"></a>二、选择器</h4><p>css3中新增了一些选择器，主要为如下图所示:<br><img src="https://static.vue-js.com/e368cf20-9b5e-11eb-85f6-6fac77c0c9b3.png"></p>
+<h4 id="三、新样式"><a href="#三、新样式" class="headerlink" title="三、新样式"></a>三、新样式</h4><p><strong>边框</strong><br>css3新增了三个边框属性，分别是：</p>
+<ul>
+<li><p>border-radius：创建圆角边框</p>
+</li>
+<li><p>box-shadow：为元素添加阴影</p>
+</li>
+<li><p>border-image：使用图片来绘制边框</p>
+</li>
+</ul>
+<p><strong>box-shadow</strong><br>设置元素阴影，设置属性如下：</p>
+<ul>
+<li>水平阴影</li>
+<li>垂直阴影</li>
+<li>模糊距离(虚实)</li>
+<li>阴影尺寸(影子大小)</li>
+<li>阴影颜色</li>
+<li>内/外阴影<br>其中水平阴影和垂直阴影是必须设置的</li>
+</ul>
+<p><strong>背景</strong><br>新增了几个关于背景的属性，分别是background-clip、background-origin、background-size和background-break</p>
+<p><strong>background-clip</strong><br>用于确定背景画区，有以下几种可能的属性：</p>
+<ul>
+<li>background-clip: border-box; 背景从border开始显示</li>
+<li>background-clip: padding-box; 背景从padding开始显示</li>
+<li>background-clip: content-box; 背景显content区域开始显示</li>
+<li>background-clip: no-clip; 默认属性，等同于border-box<br>通常情况，背景都是覆盖整个元素的，利用这个属性可以设定背景颜色或图片的覆盖范围</li>
+</ul>
+<p><strong>background-origin</strong><br>当我们设置背景图片时，图片是会以左上角对齐，但是是以border的左上角对齐还是以padding的左上角或者content的左上角对齐? border-origin正是用来设置这个的</p>
+<ul>
+<li>background-origin: border-box; 从border开始计算background-position</li>
+<li>background-origin: padding-box; 从padding开始计算background-position</li>
+<li>background-origin: content-box; 从content开始计算background-position<br>默认情况是padding-box，即以padding的左上角为原点</li>
+</ul>
+<p><strong>background-size</strong><br>background-size属性常用来调整背景图片的大小，主要用于设定图片本身。有以下可能的属性：</p>
+<ul>
+<li>background-size: contain; 缩小图片以适合元素（维持像素长宽比）</li>
+<li>background-size: cover; 扩展元素以填补元素（维持像素长宽比）</li>
+<li>background-size: 100px 100px; 缩小图片至指定的大小</li>
+<li>background-size: 50% 100%; 缩小图片至指定的大小，百分比是相对包 含元素的尺寸</li>
+</ul>
+<p><strong>background-break</strong><br>元素可以被分成几个独立的盒子（如使内联元素span跨越多行），background-break 属性用来控制背景怎样在这些不同的盒子中显示</p>
+<ul>
+<li>background-break: continuous; 默认值。忽略盒之间的距离（也就是像元素没有分成多个盒子，依然是一个整体一样）</li>
+<li>background-break: bounding-box; 把盒之间的距离计算在内；</li>
+<li>background-break: each-box; 为每个盒子单独重绘背景</li>
+</ul>
+<p><strong>文字</strong><br><strong>word-wrap</strong><br>语法：word-wrap: normal|break-word</p>
+<ul>
+<li>normal：使用浏览器默认的换行</li>
+<li>break-all：允许在单词内换行</li>
+</ul>
+<p><strong>text-overflow</strong><br>text-overflow设置或检索当当前行超过指定容器的边界时如何显示，属性有两个值选择：</p>
+<ul>
+<li>clip：修剪文本</li>
+<li>ellipsis：显示省略符号来代表被修剪的文本</li>
+</ul>
+<p><strong>text-shadow</strong><br>text-shadow可向文本应用阴影。能够规定水平阴影、垂直阴影、模糊距离，以及阴影的颜色</p>
+<p><strong>text-decoration</strong><br>CSS3里面开始支持对文字的更深层次的渲染，具体有三个属性可供设置：</p>
+<ul>
+<li><p>text-fill-color: 设置文字内部填充颜色</p>
+</li>
+<li><p>text-stroke-color: 设置文字边界填充颜色</p>
+</li>
+<li><p>text-stroke-width: 设置文字边界宽度</p>
+</li>
+</ul>
+<p><strong>颜色</strong><br>css3新增了新的颜色表示方式rgba与hsla</p>
+<ul>
+<li>rgba分为两部分，rgb为颜色值，a为透明度</li>
+<li>hala分为四部分，h为色相，s为饱和度，l为亮度，a为透明度</li>
+</ul>
+<h4 id="四、transition-过渡"><a href="#四、transition-过渡" class="headerlink" title="四、transition 过渡"></a>四、transition 过渡</h4><p>transition属性可以被指定为一个或多个CSS属性的过渡效果，多个属性之间用逗号进行分隔，必须规定两项内容：</p>
+<ul>
+<li>过度效果</li>
+<li>持续时间<br>语法如下：<br><code>transition： CSS属性，花费时间，效果曲线(默认ease)，延迟时间(默认0)</code><br>上面为简写模式，也可以分开写各个属性<pre class="line-numbers language-none"><code class="language-none">transition-property: width; 
+transition-duration: 1s;
+transition-timing-function: linear;
+transition-delay: 2s;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li>
+</ul>
+<h4 id="五、transform-转换"><a href="#五、transform-转换" class="headerlink" title="五、transform 转换"></a>五、transform 转换</h4><p>transform属性允许你旋转，缩放，倾斜或平移给定元素</p>
+<p>transform-origin：转换元素的位置（围绕那个点进行转换），默认值为(x,y,z):(50%,50%,0)</p>
+<p>使用方式：</p>
+<ul>
+<li>transform: translate(120px, 50%)：位移</li>
+<li>transform: scale(2, 0.5)：缩放</li>
+<li>transform: rotate(0.5turn)：旋转</li>
+<li>transform: skew(30deg, 20deg)：倾斜</li>
+</ul>
+<h4 id="六、animation-动画"><a href="#六、animation-动画" class="headerlink" title="六、animation 动画"></a>六、animation 动画</h4><p>动画这个平常用的也很多，主要是做一个预设的动画。和一些页面交互的动画效果，结果和过渡应该一样，让页面不会那么生硬</p>
+<p>animation也有很多的属性</p>
+<ul>
+<li>animation-name：动画名称</li>
+<li>animation-duration：动画持续时间</li>
+<li>animation-timing-function：动画时间函数</li>
+<li>animation-delay：动画延迟时间</li>
+<li>animation-iteration-count：动画执行次数，可以设置为一个整数，也可以设置为infinite，意思是无限循环</li>
+<li>animation-direction：动画执行方向</li>
+<li>animation-paly-state：动画播放状态</li>
+<li>animation-fill-mode：动画填充模式</li>
+</ul>
+<h4 id="七、渐变"><a href="#七、渐变" class="headerlink" title="七、渐变"></a>七、渐变</h4><p>颜色渐变是指在两个颜色之间平稳的过渡，css3渐变包括</p>
+<ul>
+<li><p>linear-gradient：线性渐变</p>
+<blockquote>
+<p>background-image: linear-gradient(direction, color-stop1, color-stop2, …);</p>
+</blockquote>
+</li>
+<li><p>radial-gradient：径向渐变</p>
+<blockquote>
+<p>linear-gradient(0deg, red, green);</p>
+</blockquote>
+</li>
+</ul>
 
                 
             </div>
@@ -536,7 +758,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://155strive.github.io/2022/06/16/hello-world/">https://155strive.github.io/2022/06/16/hello-world/</a>
+                    <a href="https://155strive.github.io/2022/06/24/qian-duan-mian-shi-html-css-pian/">https://155strive.github.io/2022/06/24/qian-duan-mian-shi-html-css-pian/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -573,7 +795,15 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E9%9D%A2%E8%AF%95/">
+                                    <span class="chip bg-color">面试</span>
+                                </a>
+                            
+                                <a href="/tags/html%EF%BC%8Ccss/">
+                                    <span class="chip bg-color">html，css</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -1038,6 +1268,59 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
+                <a href="/2022/06/25/qian-duan-mian-shi-javascript-pian/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="前端面试-JavaScript篇">
+                        
+                        <span class="card-title">前端面试-JavaScript篇</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-06-25
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/JavaScript%EF%BC%8CES6/">
+                        <span class="chip bg-color">JavaScript，ES6</span>
+                    </a>
+                    
+                    <a href="/tags/%E9%9D%A2%E8%AF%95/">
+                        <span class="chip bg-color">面试</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
                 <a href="/2022/06/16/typora-de-yong-fa/">
                     <div class="card-image">
                         
@@ -1054,9 +1337,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-06-16
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-16
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1081,44 +1364,6 @@
                     </a>
                     
                 </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2022/06/16/hello-world/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
-                        
-                        <span class="card-title">Hello World</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-16
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            谢亦凯
-                            
-                        </span>
-                    </div>
-                </div>
-
                 
             </div>
         </div>
