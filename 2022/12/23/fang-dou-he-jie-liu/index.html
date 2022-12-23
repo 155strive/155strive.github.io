@@ -4,9 +4,16 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="前端面试-JavaScript篇, 魔鬼">
-    <meta name="description" content="JavaScript面试题JavaScript基础语法null 和 undefined 有什么区别？首先 Undefined 和 Null 都是基本数据类型，这两个基本数据类型分别都只有一个值，就是 undefined 和 null。
-un">
+    <meta name="keywords" content="防抖和节流, 魔鬼">
+    <meta name="description" content="防抖与节流一、是什么
+
+本质上是优化高频率执行代码的一种手段
+
+
+如：浏览器的 resize、scroll、keypress、mousemove 等事件在触发时，会不断地调用绑定在事件上的回调函数，极大地浪费资源，降低前端性能
+
+
+为了优化">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -29,7 +36,7 @@ un">
     </style>
 
 
-    <title>前端面试-JavaScript篇 | 魔鬼</title>
+    <title>防抖和节流 | 魔鬼</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -321,12 +328,12 @@ un">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">前端面试-JavaScript篇</h1>
+                    <h1 class="description center-align post-title">防抖和节流</h1>
                 </div>
             </div>
         </div>
@@ -442,27 +449,18 @@ un">
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/JavaScript%EF%BC%8CES6/">
-                                <span class="chip bg-color">JavaScript，ES6</span>
-                            </a>
-                        
                             <a href="/tags/%E9%9D%A2%E8%AF%95/">
                                 <span class="chip bg-color">面试</span>
+                            </a>
+                        
+                            <a href="/tags/javascript/">
+                                <span class="chip bg-color">javascript</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
-                                前端
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -471,28 +469,28 @@ un">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-06-25
+                    2022-12-23
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-06-24
+                    2022-12-23
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    258
+                    697
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -515,11 +513,80 @@ un">
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="JavaScript面试题"><a href="#JavaScript面试题" class="headerlink" title="JavaScript面试题"></a>JavaScript面试题</h1><h2 id="JavaScript基础语法"><a href="#JavaScript基础语法" class="headerlink" title="JavaScript基础语法"></a>JavaScript基础语法</h2><h3 id="null-和-undefined-有什么区别？"><a href="#null-和-undefined-有什么区别？" class="headerlink" title="null 和 undefined 有什么区别？"></a>null 和 undefined 有什么区别？</h3><p>首先 Undefined 和 Null 都是基本数据类型，这两个基本数据类型分别都只有一个值，就是 undefined 和 null。</p>
-<p>undefined 代表的含义是未定义，null 代表的含义是空对象。一般变量声明了但还没有定义的时候会返回 undefined，null主要用于赋值给一些可能会返回对象的变量，作为初始化。</p>
-<p>undefined 在 JavaScript 中不是一个保留字，这意味着可以使用 undefined 来作为一个变量名，但是这样的做法是非常危险的，它会影响对 undefined 值的判断。我们可以通过一些方法获得安全的 undefined 值，比如说 void 0。</p>
-<p>当对这两种类型使用 typeof 进行判断时，Null 类型化会返回 “object”，这是一个历史遗留的问题。当使用双等号对两种类型的值进行比较时会返回 true，使用三个等号时会返回 false。</p>
-<h2 id="JavaScript进阶webAPI"><a href="#JavaScript进阶webAPI" class="headerlink" title="JavaScript进阶webAPI"></a>JavaScript进阶webAPI</h2><h2 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h2>
+                <h1 id="防抖与节流"><a href="#防抖与节流" class="headerlink" title="防抖与节流"></a>防抖与节流</h1><p>一、是什么</p>
+<blockquote>
+<p>本质上是优化高频率执行代码的一种手段</p>
+</blockquote>
+<blockquote>
+<p>如：浏览器的 <code>resize</code>、<code>scroll</code>、<code>keypress</code>、<code>mousemove</code> 等事件在触发时，会不断地调用绑定在事件上的回调函数，极大地浪费资源，降低前端性能</p>
+</blockquote>
+<blockquote>
+<p>为了优化体验，需要对这类事件进行调用次数的限制，对此我们就可以采用 <strong>防抖（debounce）</strong> 和 <strong>节流（throttle）</strong> 的方式来减少调用频率</p>
+</blockquote>
+<p><strong>定义：</strong></p>
+<ul>
+<li>节流: n 秒内只运行一次，若在 n 秒内重复触发，只有一次生效</li>
+<li>防抖: n 秒后在执行该事件，若在 n 秒内被重复触发，则重新计时</li>
+</ul>
+<h2 id="节流"><a href="#节流" class="headerlink" title="节流"></a>节流</h2><blockquote>
+<p>完成节流可以使用时间戳与定时器的写法</p>
+</blockquote>
+<blockquote>
+<p>使用时间戳写法，事件会立即执行，停止触发后没有办法再次执行</p>
+</blockquote>
+<pre class="line-numbers language-none"><code class="language-none">function throttled1(fn, delay = 500) {
+    let oldtime = Date.now()
+    return function (...args) {
+        let newtime = Date.now()
+        if (newtime - oldtime &gt;= delay) {
+            fn.apply(null, args)
+            oldtime = Date.now()
+        }
+    }
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>使用定时器写法，<code>delay</code>毫秒后第一次执行，第二次事件停止触发后依然会再一次执行</p>
+</blockquote>
+<h2 id="防抖"><a href="#防抖" class="headerlink" title="防抖"></a>防抖</h2><p><strong>防抖: n 秒后在执行该事件，若在 n 秒内被重复触发，则重新计时</strong></p>
+<blockquote>
+<p>利用定时器</p>
+</blockquote>
+<pre class="line-numbers language-none"><code class="language-none">&lt;button&gt;点击&lt;/button&gt;
+  &lt;script&gt;
+    var btn = document.querySelector('button')
+    var timer = null
+    btn.addEventListener('click', function () {
+      clearTimeout(timer)  //打印前先清除前面的定时器，保持始终只有一个定时器
+      timer = setTimeout(() =&gt; {
+        console.log('发送请求了...')
+      }, 1000)
+    })
+  &lt;/script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h2><p>相同点：</p>
+<ul>
+<li>都可以通过使用 <code>setTimeout</code> 实现</li>
+<li>目的都是，降低回调执行频率。节省计算资源</li>
+</ul>
+<p>不同点：</p>
+<ul>
+<li>函数防抖，在一段连续操作结束后，处理回调，利用<code>clearTimeout</code>和 <code>setTimeout</code>实现。函数节流，在一段连续操作中，每一段时间只执行一次，频率较高的事件中使用来提高性能</li>
+<li>函数防抖关注一定时间连续触发的事件，只在最后执行一次，而函数节流一段时间内只执行一次</li>
+</ul>
+<p>例如，都设置时间频率为 500ms，在 2 秒时间内，频繁触发函数，节流，每隔 500ms 就执行一次。防抖，则不管调动多少次方法，在 2s 后，只会执行一次</p>
+<h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><p>防抖在连续的事件，只需触发一次回调的场景有：</p>
+<ul>
+<li>搜索框搜索输入。只需用户最后一次输入完，再发送请求</li>
+<li>手机号、邮箱验证输入检测</li>
+<li>窗口大小<code>resize</code>。只需窗口调整完成后，计算窗口大小。防止重复渲染。</li>
+</ul>
+<p>节流在间隔一段时间执行一次回调的场景有：</p>
+<ul>
+<li>滚动加载，加载更多或滚到底部监听</li>
+<li>搜索框，搜索联想功能</li>
+</ul>
+
                 
             </div>
             <hr/>
@@ -545,7 +612,7 @@ un">
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://155strive.github.io/2022/06/25/qian-duan-mian-shi-javascript-pian/">https://155strive.github.io/2022/06/25/qian-duan-mian-shi-javascript-pian/</a>
+                    <a href="https://155strive.github.io/2022/12/23/fang-dou-he-jie-liu/">https://155strive.github.io/2022/12/23/fang-dou-he-jie-liu/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -583,12 +650,12 @@ un">
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/JavaScript%EF%BC%8CES6/">
-                                    <span class="chip bg-color">JavaScript，ES6</span>
-                                </a>
-                            
                                 <a href="/tags/%E9%9D%A2%E8%AF%95/">
                                     <span class="chip bg-color">面试</span>
+                                </a>
+                            
+                                <a href="/tags/javascript/">
+                                    <span class="chip bg-color">javascript</span>
                                 </a>
                             
                         </div>
@@ -1055,6 +1122,51 @@ un">
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
+                <a href="/2022/12/23/javascript-ji-chu-zhi-shi/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="javascript基础知识">
+                        
+                        <span class="card-title">javascript基础知识</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-12-23
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            谢亦凯
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/javascript/">
+                        <span class="chip bg-color">javascript</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
                 <a href="/2022/06/26/qian-duan-mian-shi-vue-pian/">
                     <div class="card-image">
                         
@@ -1071,9 +1183,9 @@ un">
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-06-26
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-26
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1095,59 +1207,6 @@ un">
                     
                     <a href="/tags/Vue/">
                         <span class="chip bg-color">Vue</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2022/06/24/qian-duan-mian-shi-html-css-pian/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="前端面试-html，css篇">
-                        
-                        <span class="card-title">前端面试-html，css篇</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-24
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    前端
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E9%9D%A2%E8%AF%95/">
-                        <span class="chip bg-color">面试</span>
-                    </a>
-                    
-                    <a href="/tags/html%EF%BC%8Ccss/">
-                        <span class="chip bg-color">html，css</span>
                     </a>
                     
                 </div>
